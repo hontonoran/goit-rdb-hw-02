@@ -19,5 +19,7 @@ CREATE TABLE order_details (
     order_id INT NOT NULL,
     product_name VARCHAR(100) NOT NULL,
     quantity INT NOT NULL,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    UNIQUE (order_id, product_name),
+    CHECK (quantity > 0)
 );
