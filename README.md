@@ -9,7 +9,7 @@
 | normalized_table.xlsx | Таблиці на кожному етапі нормалізації (1НФ, 2НФ, 3НФ) |
 | create_tables.sql | Створення БД hw02 і таблиць clients, products, orders, order_details |
 | insert_values.sql | Заповнення таблиць даними |
-| select.sql | Перевірочні запити: SELECT до таблиці clients і JOIN, що збирає вихідну таблицю |
+| select.sql | Перевірочний запит SELECT до таблиці clients |
 | screenshots | Скріншоти до кожного пункту завдання |
 
 ## Етапи Нормалізації
@@ -37,15 +37,16 @@
 ## Запуск
 
 Запустити скрипти в MySQL у такому порядку:
-1. `create_tables.sql` (перестворює БД hw02 з нуля)
+1. `create_tables.sql`
 2. `insert_values.sql`
 
 ## Схема БД і Тестування
 
-![Схема](screenshots/p5_schema.png)
+![Схема, частина 1](screenshots/p5_schema_part1.png)
+![Схема, частина 2](screenshots/p5_schema_part2.png)
 
 У базі hw02 було створено чотири таблиці - clients, products, orders, order_details.
 
-SELECT * FROM clients поверне 3 рядки без дублікатів, як і очікується. JOIN усіх чотирьох таблиць поверне 4 рядки, ідентичні вихідній таблиці. Для перевірки можна запустити `select.sql`.
+SELECT * FROM clients поверне 3 рядки без дублікатів, як і очікується. Для цього можна опційно запустити `select.sql`.
 
 ![Результат](screenshots/p6_select.png)
